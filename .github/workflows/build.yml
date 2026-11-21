@@ -1,0 +1,78 @@
+name: Build Nachhall
+
+on:
+  push:
+    paths-ignore:
+      - 'reference/pro-r/**'   # uploaded reference recordings do not need a build
+  pull_request:
+    paths-ignore:
+      - 'reference/pro-r/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Windows
+            os: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ------------------------------------------------------------------ configure
+      - name: Configure (Windows, newest installed Visual Studio)
+        if: runner.os == 'Windows'
+        run: cmake -S . -B build -A x64
+
+      - name: Build (Windows)
+        if: runner.os == 'Windows'
+        run: cmake --build build --config Release --parallel 4 --target Nachhall_VST3 Nachhall_Standalone NachhallDspTests NachhallBehaviourTests NachhallReference
+
+      - name: DSP tests (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          build\Release\NachhallDspTests.exe
+          build\Release\NachhallBehaviourTests.exe
+          build\Release\NachhallReference.exe signals $env:RUNNER_TEMP
+          build\Release\NachhallReference.exe plan $env:RUNNER_TEMP\plan.csv $env:RUNNER_TEMP\plan.md
+          # the committed (possibly filled-in) measurement plan must match the tool
+          build\Release\NachhallReference.exe checkplan reference\Messplan.csv
+          # Nachhall against the measured features of the 52 Pro-R 2 recordings
+          build\Release\NachhallReference.exe match reference\pro-r-messwerte.csv
+
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        shell: bash
+        run: |
+          mkdir -p dist/Nachhall-Windows
+          cp -r build/Nachhall_artefacts/Release/VST3/Nachhall.vst3 dist/Nachhall-Windows/
+          cp build/Nachhall_artefacts/Release/Standalone/Nachhall.exe dist/Nachhall-Windows/Nachhall-Standalone.exe
+          cp docs/INSTALL-Windows.txt dist/Nachhall-Windows/INSTALL.txt
+
+      - name: Upload (Windows)
+        if: runner.os == 'Windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Nachhall-Windows-VST3
+          path: dist/Nachhall-Windows
+
+      - name: pluginval (Windows)
+        if: runner.os == 'Windows'
+        shell: bash
+        run: |
+          curl -sSL -o pluginval.zip https://github.com/Tracktion/pluginval/releases/latest/download/pluginval_Windows.zip
+          unzip -q -o pluginval.zip -d pluginval
+          ./pluginval/pluginval.exe --strictness-level 10 --validate-in-process --output-dir pluginval-log --validate "build/Nachhall_artefacts/Release/VST3/Nachhall.vst3"
+
+      - name: Upload pluginval log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pluginval-log-${{ matrix.name }}
+          path: pluginval-log
+          if-no-files-found: ignore

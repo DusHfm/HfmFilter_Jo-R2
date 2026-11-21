@@ -1,0 +1,3 @@
+reference/Messplan.csv -text
+*.wav binary
+reference/pro-r-messwerte.csv -text

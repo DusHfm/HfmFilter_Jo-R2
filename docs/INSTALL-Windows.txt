@@ -1,0 +1,22 @@
+NACHHALL - Installation unter Windows (NI MASCHINE)
+===================================================
+
+1. MASCHINE schliessen.
+
+2. Den Ordner "Nachhall.vst3" (der ganze Ordner!) kopieren nach:
+
+       C:\Program Files\Common Files\VST3\
+
+   (Windows fragt evtl. nach Administrator-Rechten -> "Fortsetzen".)
+
+3. MASCHINE starten.
+   Falls Nachhall nicht auftaucht:
+   File -> Preferences -> Plug-ins -> Manager -> "Rescan".
+
+4. In MASCHINE: Sound, Group oder Master waehlen -> freien Plug-in-Slot
+   anklicken -> DusHfm Audio -> "Nachhall".
+
+Tipp: Auf einem Send (Aux) "Mix" auf 100 % stellen.
+
+"Nachhall-Standalone.exe" ist eine eigenstaendige Testversion ohne DAW
+(nicht noetig fuer MASCHINE).

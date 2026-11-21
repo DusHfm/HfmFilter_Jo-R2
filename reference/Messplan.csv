@@ -1,0 +1,55 @@
+﻿Nr;Datei;Testsignal;Pflicht;Einstellung (Rest wie Basis);Anzeige Hallzeit (s);Raumname;erledigt;Code
+1;K_Kalibrierung.wav;Test-A-Impuls.wav;ja;Mix 0 % (prüft, ob der Export sauber ist);;;x;mix=0
+2;K_Kalibrierung_B.wav;Test-B-Ton-Rauschen.wav;ja;Mix 0 % mit Signal B (prüft laut/leise durch die Kette);;;x;mix=0
+3;B_Basis_A.wav;Test-A-Impuls.wav;ja;Basis, nichts ändern;1,85;;x;
+4;B_Basis_B.wav;Test-B-Ton-Rauschen.wav;ja;Basis, nichts ändern;1,85;;x;
+5;R01.wav;Test-A-Impuls.wav;ja;Space: Raum-Symbol 1 anklicken (0,20 s);0,20;;x;space=0.2
+6;RZ_0400ms.wav;Test-A-Impuls.wav;ja;Space auf 0,40 s stellen (zwischen Symbol 1 und 2);0,40;;x;space=0.4
+7;R02.wav;Test-A-Impuls.wav;ja;Space: Raum-Symbol 2 anklicken (0,75 s);0,75;;x;space=0.75
+8;RZ_1200ms.wav;Test-A-Impuls.wav;ja;Space auf 1,20 s stellen (zwischen Symbol 2 und 3);1,20;;x;space=1.2
+9;R03.wav;Test-A-Impuls.wav;ja;Space: Raum-Symbol 3 anklicken (1,85 s);1,85;;x;space=1.85
+10;RZ_2400ms.wav;Test-A-Impuls.wav;ja;Space auf 2,40 s stellen (zwischen Symbol 3 und 4);2,40;;x;space=2.4
+11;R04.wav;Test-A-Impuls.wav;ja;Space: Raum-Symbol 4 anklicken (3,20 s);3,20;;x;space=3.2
+12;RZ_4000ms.wav;Test-A-Impuls.wav;ja;Space auf 4,00 s stellen (zwischen Symbol 4 und 5);4,00;;x;space=4
+13;R05.wav;Test-A-Impuls.wav;ja;Space: Raum-Symbol 5 anklicken (5,20 s);5,20;;x;space=5.2
+14;RZ_7000ms.wav;Test-A-Impuls.wav;ja;Space auf 7,00 s stellen (zwischen Symbol 5 und 6);7,00;;x;space=7
+15;R06.wav;Test-A-Impuls.wav;ja;Space: Raum-Symbol 6 anklicken (10,0 s);10,0;;x;space=10
+16;S_Vintage_Klein.wav;Test-A-Impuls.wav;optional;Style Vintage + Raum-Symbol 2 (0,75 s);0,75;;x;style=vintage,space=0.75
+17;S_Vintage_Basis.wav;Test-A-Impuls.wav;ja;Style Vintage;1,85;;x;style=vintage
+18;S_Vintage_Groesster.wav;Test-A-Impuls.wav;ja;Style Vintage + Raum-Symbol 6 (10,0 s);10,0;;x;style=vintage,space=10
+19;S_Plate_Klein.wav;Test-A-Impuls.wav;optional;Style Plate + Raum-Symbol 2 (0,75 s);0,75;;x;style=plate,space=0.75
+20;S_Plate_Basis.wav;Test-A-Impuls.wav;ja;Style Plate;1,85;;x;style=plate
+21;S_Plate_Groesster.wav;Test-A-Impuls.wav;ja;Style Plate + Raum-Symbol 6 (10,0 s);10,0;;x;style=plate,space=10
+22;D_DecayRate_025.wav;Test-A-Impuls.wav;ja;Decay Rate 25 %;0,46;;x;decay=25
+23;D_DecayRate_050.wav;Test-A-Impuls.wav;optional;Decay Rate 50 %;0,92;;x;decay=50
+24;D_DecayRate_200.wav;Test-A-Impuls.wav;optional;Decay Rate 200 %;3,70;;x;decay=200
+25;D_DecayRate_400.wav;Test-A-Impuls.wav;ja;Decay Rate 400 %;7,40;;x;decay=400
+26;H_Brightness_m100.wav;Test-A-Impuls.wav;ja;Brightness -100 %;1,85;;x;brightness=-100
+27;H_Brightness_m050.wav;Test-A-Impuls.wav;optional;Brightness -50 %;1,85;;x;brightness=-50
+28;H_Brightness_p050.wav;Test-A-Impuls.wav;optional;Brightness +50 %;1,85;;x;brightness=50
+29;H_Brightness_p100.wav;Test-A-Impuls.wav;ja;Brightness +100 %;1,85;;x;brightness=100
+30;C_Character_000_A.wav;Test-A-Impuls.wav;ja;Character 0 %;1,85;;x;character=0
+31;C_Character_000_B.wav;Test-B-Ton-Rauschen.wav;ja;Character 0 %;1,85;;x;character=0
+32;C_Character_025_A.wav;Test-A-Impuls.wav;optional;Character 25 %;1,85;;x;character=25
+33;C_Character_075_A.wav;Test-A-Impuls.wav;optional;Character 75 %;1,85;;x;character=75
+34;C_Character_100_A.wav;Test-A-Impuls.wav;ja;Character 100 %;1,85;;x;character=100
+35;C_Character_100_B.wav;Test-B-Ton-Rauschen.wav;ja;Character 100 %;1,85;;x;character=100
+36;E_Distance_000.wav;Test-A-Impuls.wav;ja;Distance 0 %;1,85;;x;distance=0
+37;E_Distance_025.wav;Test-A-Impuls.wav;optional;Distance 25 %;1,85;;x;distance=25
+38;E_Distance_075.wav;Test-A-Impuls.wav;optional;Distance 75 %;1,85;;x;distance=75
+39;E_Distance_100.wav;Test-A-Impuls.wav;ja;Distance 100 %;1,85;;x;distance=100
+40;T_Thickness_m100_A.wav;Test-A-Impuls.wav;ja;Thickness -100 %;1,85;;x;thickness=-100
+41;T_Thickness_m100_B.wav;Test-B-Ton-Rauschen.wav;ja;Thickness -100 %;1,85;;x;thickness=-100
+42;T_Thickness_m050_A.wav;Test-A-Impuls.wav;optional;Thickness -50 %;1,85;;x;thickness=-50
+43;T_Thickness_p050_A.wav;Test-A-Impuls.wav;optional;Thickness +50 %;1,85;;x;thickness=50
+44;T_Thickness_p100_A.wav;Test-A-Impuls.wav;ja;Thickness +100 %;1,85;;x;thickness=100
+45;T_Thickness_p100_B.wav;Test-B-Ton-Rauschen.wav;ja;Thickness +100 %;1,85;;x;thickness=100
+46;W_Width_000.wav;Test-A-Impuls.wav;ja;Stereo Width 0 %;1,85;;x;width=0
+47;W_Width_050.wav;Test-A-Impuls.wav;ja;Stereo Width 50 %;1,85;;x;width=50
+48;W_Width_070.wav;Test-A-Impuls.wav;optional;Stereo Width 70 % (Standardwert);1,85;;x;width=70
+49;W_Width_120.wav;Test-A-Impuls.wav;ja;Stereo Width 120 % (Maximum);1,85;;x;width=120
+50;X_Predelay_100ms.wav;Test-A-Impuls.wav;optional;Predelay 100 ms (Sync aus);1,85;;x;predelay=100
+51;X_DecayEQ_HighShelf.wav;Test-A-Impuls.wav;optional;Decay-Rate-EQ: High Shelf, 6 kHz, Wert 200 %, Q 1 (Standard);1,85;;x;decayeq=highshelf:6000:2:1
+52;X_DecayEQ_LowShelf.wav;Test-A-Impuls.wav;optional;Decay-Rate-EQ: Low Shelf, 200 Hz, Wert 50 %, Q 1 (Standard);1,85;;x;decayeq=lowshelf:200:0.5:1
+53;X_PostEQ_Bell.wav;Test-A-Impuls.wav;optional;Character 0 % + Post-EQ: Bell, 1 kHz, +12 dB, Q 1 (Auto Gain aus);;;;character=0,autogain=0,posteq=bell:1000:12:1
+54;X_PostEQ_LowCut.wav;Test-A-Impuls.wav;optional;Character 0 % + Post-EQ: Low Cut, 400 Hz, 24 dB/Okt. (Auto Gain aus);;;;character=0,autogain=0,posteq=lowcut:400:0:0.7:24
