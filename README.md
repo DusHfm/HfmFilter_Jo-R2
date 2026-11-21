@@ -1,17 +1,9 @@
-# Nachhall – Hall‑Plugin (VST3) für NI MASCHINE
+# Nachhall – Hall‑Plugin (VST3)
 
 ![Nachhall](docs/screenshot.png)
 
-**Nachhall** ist ein algorithmischer Hall. Bedienung und Funktionen orientieren sich an **FabFilter Pro‑R 2**:
+**Nachhall** ist ein algorithmischer Hall. Bedienung und Funktionen:
 Space‑Regler mit Raummodellen, Decay Rate, Decay‑Rate‑EQ, Post‑EQ, Freeze, Ducking, Auto Gate, Modern/Vintage/Plate und IR‑Import.
-
-> **Ehrlich gesagt:** Der Klang ist nicht 1:1 Pro‑R. FabFilter veröffentlicht seinen Algorithmus nicht.
-> Nachhall nutzt einen eigenen Algorithmus mit **denselben Reglern, Skalen und Funktionen**. Seine Raummodelle
-> und Reglerkurven wurden an **52 Aufnahmen des echten Pro‑R 2** angepasst (Hallzeit pro Oktave, Pegel,
-> Klarheit, Klangfarbe, Anfang des Halls, Körnung/Echodichte, Stereo, Modulation, Thickness‑Dynamik).
-> Gemessen wurde dabei nur der Ausgang von Pro‑R.
-> Den genauen Vergleich (Funktionen, Messwerte, verbleibende Unterschiede) gibt es hier: **[docs/VERGLEICH-PRO-R.md](docs/VERGLEICH-PRO-R.md)**
-
 ---
 
 ## 1. Fertiges Plugin herunterladen
@@ -25,7 +17,7 @@ Gebaut wird automatisch nur für Windows. Auf dem Mac lässt sich Nachhall selbs
 
 (Artifacts sind 90 Tage verfügbar. Danach einfach einen neuen Lauf über **Run workflow** starten.)
 
-## 2. In MASCHINE installieren
+## 2. Installieren
 
 **Windows**
 - Ganzen Ordner `Nachhall.vst3` nach `C:\Program Files\Common Files\VST3\` kopieren.
